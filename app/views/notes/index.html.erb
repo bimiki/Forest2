@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+
+<h2>listen to chilledcow</h2>
+
+<div>
+<iframe height="320px" width="100%" src="https://www.youtube.com/embed/DWcJFNfaw9c?autoplay=1"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"> </iframe>
+</div>
+
+      <p>YOUTUBE LIKE A FOREST</p>
+      <th colspan="3"></th>
+
+    <% @notes.each do |note| %>
+
+        <!--<td><%= note.name %></td> -->
+    <div>
+      <p style="text-align: center;"><iframe  height="" width="" src="<%= note.enbedable_url %>" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"> </iframe></p>
+
+     <tr>
+      <td><button class="fa fa-thumbs-up"><%= render "notes/upvote_link", note: note %></button></td>
+      <td><button class="fa fa-thumbs-down"><%= render "notes/downvote_link", note: note %></button></td>
+      <td><%= render "notes/votes_score", note: note %></td>
+      <td><button><%= link_to 'Show', note %></button></td>
+      <td><button><%= link_to 'Edit', edit_note_path(note) %></button></td>
+      <td><button><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      <td><button><%= link_to 'Add', new_note_path %></button></td>
+      <br> </br>
+      </tr>
+    </div>
+    <% end %>
+
+<div>
+    <footer>
+
+      Copyright 42069 all rights reserved
+
+    </footer>
+  </div>
