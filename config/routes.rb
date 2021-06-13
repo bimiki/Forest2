@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
  devise_for :users
 
-
-  get 'home/home'
   root 'notes#index'
+  get 'notes/index'
+  
   post 'notes/new'
   get 'users/profile'
   resources :users
