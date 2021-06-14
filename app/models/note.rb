@@ -10,8 +10,3 @@ class Note < ApplicationRecord
   end
 
 end
-@note = Note.new(:name => '')
-@note.save
-
-@note.liked_by @user
-@note.votes_for.size # => 1
