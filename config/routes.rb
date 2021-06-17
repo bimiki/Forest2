@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root 'notes#index'
   get 'notes/index'
-
-  post 'notes/new'
   get 'users/profile'
+  post 'notes/new'
+
   resources :users
   resources :tasks
   resources :notes do
