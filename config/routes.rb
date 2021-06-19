@@ -8,13 +8,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :tasks
-  resources :notes do
-    member do
-      patch "upvote", to: "notes#upvote"
-      patch "downvote", to: "notes#downvote"
-    end
-  end
-
+  resources :notes 
   namespace :notes do
     resources :tasks
   end

@@ -7,25 +7,7 @@ class NotesController < ApplicationController
     @notes = current_user.notes.order(cached_votes_score: :desc)
     if nil
     end
-    end  
-
-  def upvote
-      @note = current_user.notes.find(params[:id])
-      if current_user.voted_up_on? @note
-        @note.unvote_by current_user
-      else
-        @note.upvote_by current_user
-      end
-      render "vote.js.erb"
-  end
-  def downvote
-      @note = current_user.notes.find(params[:id])
-      if current_user.voted_down_on? @note
-        @note.unvote_by current_user
-      else
-        @note.downvote_by current_user
-      end
-      render "vote.js.erb"
+  
   end
   # GET /notes/1 or /notes/1.json
   def show
