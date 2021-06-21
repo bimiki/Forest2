@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   get 'notes/index'
   get 'users/profile'
   post 'notes/new'
+  get 'users/show'
+
 
   resources :users
   resources :tasks
-  resources :notes 
+  resources :notes
   namespace :notes do
     resources :tasks
   end
