@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'notes/index'
   get 'users/profile'
   post 'notes/new'
-  get 'users/show'
+
 
 
   resources :users
