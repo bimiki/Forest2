@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'bootstrap-sass'
-
+gem 'acts_as_votable'
 gem 'devise'
 gem 'nested_scaffold'
 
